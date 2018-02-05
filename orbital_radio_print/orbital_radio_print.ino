@@ -93,15 +93,28 @@ void loop() {
   }
   
   if(command == 'a'){
-    m3wReverse(130);
+    m3Reverse(130);
     m4Reverse(130);
   }
-  
+
+  if(command == 'q'){
+    m1Forward(130);
+    m2Forward(130);
+    m3Forward(130);
+    m4Forward(130);
+  }
+
+  if(command == 'e'){
+    m1Reverse(130);
+    m2Reverse(130);
+    m3Reverse(130);
+    m4Reverse(130);
+  }
+
   delay(20);
   
   resetMotors();
-  
-
+ 
 }
 
 void m1Forward(int motorSpeed){
@@ -162,3 +175,6 @@ void resetMotors(){
   digitalWrite(m4_forward, LOW);
   digitalWrite(m4_reverse, LOW);
 }
+  
+
+
